@@ -45,7 +45,6 @@ The first step includes checking TCP connectivity using Windows or Linux OS.
     ```
 
 ---
-
 If the test isn't successful, proceed with the following steps. If the test is successful, the issue isn't due to a TCP connectivity issue. Go to [operational issues](#cluster-creation-and-operations-issues) to troubleshoot further.
 
 ### Check Network Security Group (NSG) rules
@@ -153,3 +152,8 @@ If the cluster's subnet is configured to force tunnel all internet-bound traffic
 ### Check firewall rules
 
 If you force tunnel subnet outbound traffic to a firewall, make sure all dependencies FQDN (for example, *.blob.core.windows.net*) are allowed in the firewall configuration as described in [securing outbound traffic with firewall](vnet-deployment.md#securing-outbound-traffic-with-a-firewall).
+
+## Cluster Suspension Issues
+
+If the cluster fails to suspend, confirm that there aren't any locks on the networking resources in the customer's subscription.
+
